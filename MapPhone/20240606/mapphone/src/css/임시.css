@@ -1,0 +1,227 @@
+/* 전체 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.total {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  height: 95vh;
+  max-height: 100vh;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(255, 84, 84, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+/* 헤더파트 */
+.navigation {
+  border: 1px solid rgb(255, 150, 150);
+  border-radius: 10px 10px 0px 0px;
+  background: -webkit-linear-gradient(right, #f7a061, #dc2a2a);
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.first,
+.second {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.logo img,
+.gps img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  display: flex;
+}
+
+.second img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  display: flex;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  flex-grow: 1;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 3px 50px;
+  height: 20px;
+  width: 100%;
+}
+
+.search .button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  width: 50%;
+}
+
+.search .button:hover {
+  background-color: #e68900;
+}
+
+/* 바디 부분 */
+.totalbody,
+.totalbody * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;
+  font-size: 12px;
+}
+
+.totalbody {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+}
+
+.placeinfo_wrap {
+  position: absolute;
+  bottom: 28px;
+  left: -150px;
+  width: 300px;
+}
+
+.placeinfo {
+    width: 80%;
+    height: 10%;
+    position: absolute;
+    bottom: calc(8% + 10px);
+    /* footer 위에 위치하도록 설정 */
+    left: 50%;
+    /* 가운데 정렬 */
+    transform: translateX(-50%);
+    z-index: 1000;
+    /* 다른 요소 위에 표시되도록 설정 */
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.placeinfo button img {
+  width: 30px; /* 이미지의 너비 조정 */
+  height: 30px; /* 이미지의 높이 조정 */
+  margin-left: 10px; /* 이미지와 텍스트 사이의 여백 조정 */
+}
+
+.placeinfo:nth-of-type(n) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+
+.placeinfo_wrap .after {
+  content: '';
+  position: relative;
+  margin-left: -12px;
+  left: 50%;
+  width: 22px;
+  height: 12px;
+  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
+}
+
+.placeinfo a,
+.placeinfo a:hover,
+.placeinfo a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.placeinfo a,
+.placeinfo span {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.placeinfo span {
+  margin: 5px 5px 0 5px;
+  cursor: default;
+  font-size: 13px;
+}
+
+.placeinfo .title {
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px 6px 6px 6px;
+    margin: -1px -1px 0 -1px;
+    padding: 10px;
+    color: #fff;
+    background: #d95050;
+    background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+}
+
+
+.placeinfo .tel {
+  color: #0f7833;
+}
+
+.placeinfo .jibun {
+  color: #999;
+  font-size: 11px;
+  margin-top: 0;
+}
+
+/* 풋터 부분 */
+footer {
+  border: 1px solid violet;
+  border-radius: 0px 0px 10px 10px;
+  height: 8vh;
+  background: -webkit-linear-gradient(right, #f7a061, #dc2a2a);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer .bottom a {
+  color: black; /* 변경하고자 하는 색상으로 설정 */
+}
